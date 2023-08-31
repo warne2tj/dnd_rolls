@@ -1,38 +1,170 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #000;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.dice-roller {
+  border: 2px solid #8b0000;
+  padding: 20px;
+  background-color: #222;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  width: 1050px;
+  height: 380px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #8b0000;
+}
+
+.dice-options,
+.modifier-options {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.dice-option,
+.modifier-option {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 15px;
+  border: 2px solid #8b0000;
+  background-color: #333;
+  color: #8b0000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.dice-option input[type="radio"],
+.modifier-option input[type="radio"] {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dice-option:hover,
+.modifier-option:hover {
+  background-color: #444;
+}
+
+button {
+  background-color: #8b0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6a0000;
+}
+
+p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #8b0000;
+}
+
+/* OSRS-themed styles */
+.App {
+  background-color: #151515;
+}
+
+.dice-roller {
+  background-color: #2d2d2d;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Runescape UF';
+  color: #e4c140;
+}
+
+.dice-option,
+.modifier-option {
+  border-color: #e4c140;
+  background-color: #363636;
+  color: #e4c140;
+}
+
+.dice-option:hover,
+.modifier-option:hover {
+  background-color: #444;
+}
+
+button {
+  background-color: #0d0d0d;
+  color: #e4c140;
+}
+
+button:hover {
+  background-color: #1a1a1a;
+}
+
+.results-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.row-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.roll {
+  display: flex;
+  flex-direction: column;
+}
+
+.roll-button {
+  height: 45px;
+}
+
+.modifier-option.selected,
+.dice-option.selected {
+  background-color: #e4c140;
+  color: #000;
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 0;
   }
+}
+
+/* Highlight selected modifier and selected dice */
+/* ... Previous selected modifier and dice CSS rules ... */
+
+/* Apply flash animation to roll result */
+.roll-result {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #e4c140;
+}
+
+/* OSRS-themed styles */
+/* ... Previous OSRS-themed CSS rules ... */
+
+/* Apply flash animation to roll result */
+.flash {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #e4c140;
+  animation: flash 1s infinite;
 }
