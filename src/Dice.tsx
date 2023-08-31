@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export function Dice() {
     const diceOptions = [20, 12, 10, 8, 6, 4];
@@ -8,6 +8,7 @@ export function Dice() {
     const [selectedDice, setSelectedDice] = useState<number>(20);
     const [modifier, setModifier] = useState<number>(0);
     const [rollResults, setRollResults] = useState<number[]>([]);
+    const [sum, setSum] = useState(0)
   
     const rollDice = (sides: number, numRolls: number) => {
         const results = [];
@@ -17,6 +18,11 @@ export function Dice() {
         }
         setRollResults(results);
     };
+
+    useEffect(() => {
+        const count = rollResults.reduce((result, index) => result + index, 0);
+        setSum(count)
+    }, rollResults)
 
     const handleNumDiceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNumDice(Number(e.target.value));
@@ -90,8 +96,10 @@ export function Dice() {
                     {index - 5}    </label>
         ))}
         </div>
-        <button className="roll-button" onClick={() => rollDice(selectedDice, numDice)}>Roll</button>
-
+        <div className="results-display">
+            <button className="roll-button" onClick={() => rollDice(selectedDice, numDice)}>Roll</button>
+            <h1>Total:  {sum}</h1>
+        </div>
 
       <div className="results-display">
         {rollResults.map((result, index) => (
@@ -102,6 +110,7 @@ export function Dice() {
             </div>
         ))}
       </div>
+      
     </div>
     );
   };
