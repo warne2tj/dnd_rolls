@@ -96,7 +96,7 @@ export function Dice() {
       <div className="results-display">
         {rollResults.map((result, index) => (
             <div className="roll">
-                <p className={`roll-result ${result - modifier >= selectedDice ? "flash" : ""}`} key={index}>{result-modifier} + ({modifier}) = {result}</p>
+                <p className="roll-result" key={index}>{result-modifier} + ({modifier}) = {result}</p>
                 {(result !== null && result - modifier >= selectedDice) && <p className="roll-result flash">NUMMY NUMMY</p>}
                 {(result !== null && result - modifier == 1) && <p className="roll-result flash">EAT SHIT</p>}
             </div>
