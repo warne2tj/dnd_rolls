@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dnd_rolls/static/css/main.eec3816b.css",
-    "main.js": "/dnd_rolls/static/js/main.a747f312.js",
+    "main.js": "/dnd_rolls/static/js/main.5822e843.js",
     "static/js/787.28cb0dcd.chunk.js": "/dnd_rolls/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/dnd_rolls/index.html",
     "main.eec3816b.css.map": "/dnd_rolls/static/css/main.eec3816b.css.map",
-    "main.a747f312.js.map": "/dnd_rolls/static/js/main.a747f312.js.map",
+    "main.5822e843.js.map": "/dnd_rolls/static/js/main.5822e843.js.map",
     "787.28cb0dcd.chunk.js.map": "/dnd_rolls/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eec3816b.css",
-    "static/js/main.a747f312.js"
+    "static/js/main.5822e843.js"
   ]
 }
