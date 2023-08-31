@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 export function Dice() {
     const diceOptions = [20, 12, 10, 8, 6, 4];
-    const rollCounts = [1, 2, 3, 4, 5];
+    const rollCounts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     
     const [numDice, setNumDice] = useState<number>(1);
     const [selectedDice, setSelectedDice] = useState<number>(20);
